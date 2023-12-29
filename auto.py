@@ -1,7 +1,7 @@
-# from top-level module import  element1........
-from selenium import Webdriver
-# from top-level module.submodul.submodul import  element1........
-from selenium.Webdriver.common.keys import Keys
+# from top-level module import element1........
+from selenium import webdriver
+# from top-level module.submodule.submodule import element1........
+from selenium.webdriver.common.keys import Keys
 # from moduleName
 import time
 
@@ -9,18 +9,17 @@ import time
 username = "ranu"
 password = "ranu@123"
 
-# My chromedrive path
+# My chromedriver path
 driver_path = "C:/Windows/System32/chromedriver.exe"
 
-# My  URL of the Facebook login page
+# My URL of the Facebook login page
 facebook_url = "https://www.facebook.com/"
 
 # Create ChromeOptions and set the executable path
-chromeoptions = Webdriver.ChromeOptions()
-chromeoptions.add_argument(f"executable_path={driver_path}")
+chrome_options = webdriver.ChromeOptions()
+chrome_options.add_argument(f"executable_path={driver_path}")
 
-# ceo  = c
-driver = Webdriver.Chrome(options=chromeoptions)
+driver = webdriver.Chrome(options=chrome_options)
 
 try:
     # Open Facebook login page
@@ -36,7 +35,7 @@ try:
     password_field.send_keys(Keys.RETURN)
     
     # Wait for the login process to complete (adjust sleep time if necessary)
-    time.sleep(5000000)
+    time.sleep(50000000)
     
     # You can add further automation steps here
     
